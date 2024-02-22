@@ -7,9 +7,9 @@
 </head>
 <body>
     <div class="container" style="text-align: center;">
-        <div><a href="./f1">F1</a></div>
-        <div><a href="./f2">F2</a></div>
-        <div><a href="./f3">F3</a></div>
+        <div><a href="{{route('test_01')}}">F1</a></div>
+        <div><a href="{{route('test_02')}}">F2</a></div>
+        <div><a href="{{route('test_03')}}">F3</a></div>
     </div>
 </body>
 </html>

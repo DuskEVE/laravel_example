@@ -17,11 +17,17 @@ Route::get('/', function () {
     return view('index');
 });
 Route::get('/f1', function () {
-    return view('f1');
-});
+    return view('hotel.f1');
+})->name('test_01');
 Route::get('/f2', function () {
-    return view('f2');
-});
+    return view('hotel.f2');
+})->name('test_02');
 Route::get('/f3', function () {
-    return view('f3');
+    return view('hotel.f3');
+})->name('test_03');
+Route::get('/students', function () {
+    return view('student.index');
+})->name('student');
+Route::get('/user-{id}', function(int $id){
+    dd($id);
 });

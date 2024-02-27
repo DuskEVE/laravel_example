@@ -28,6 +28,9 @@ Route::get('/f3', function () {
 Route::get('/students', function () {
     return view('student.index');
 })->name('student');
+Route::get('home', function () {
+    return view('home');
+});
 Route::get('/user-{id}', function(int $id){
     dd($id);
 });

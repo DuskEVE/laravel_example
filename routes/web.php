@@ -7,5 +7,5 @@ Route::get('/', function () {
 });
 
 Route::get('/basic', function () {
-    return view('basic');
+    return view('basic.index');
 });

@@ -23,19 +23,31 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($datas as $data)
+                @if(isset($id))
+                    <tr>
+                        <td>{{$data['NO']}}</td>
+                        <td>{{$data['name']}}</td>
+                        <td>{{$data['amount']}}</td>
+                        <td>
+                            <button class="btn btn-success">edit</button>
+                            <button class="btn btn-danger">delete</button>
+                        </td>
+                    </tr>
+                @else
+                    @foreach($datas as $data)
 
-                <tr>
-                    <td>{{$data['NO']}}</td>
-                    <td>{{$data['name']}}</td>
-                    <td>{{$data['amount']}}</td>
-                    <td>
-                        <button class="btn btn-success">edit</button>
-                        <button class="btn btn-danger">delete</button>
-                    </td>
-                </tr>
+                    <tr>
+                        <td>{{$data['NO']}}</td>
+                        <td>{{$data['name']}}</td>
+                        <td>{{$data['amount']}}</td>
+                        <td>
+                            <button class="btn btn-success">edit</button>
+                            <button class="btn btn-danger">delete</button>
+                        </td>
+                    </tr>
 
-                @endforeach
+                    @endforeach
+                @endif
                 {{-- <tr>
                     <td>0</td>
                     <td>test</td>

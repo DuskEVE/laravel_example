@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('_basics', function (Blueprint $table) {
             $table->id();
+            $table->integer('NO');
+            $table->string('name');
+            $table->integer('amount');
             $table->timestamps();
         });
     }

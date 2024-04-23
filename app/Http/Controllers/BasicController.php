@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Basic;
 
 class BasicController extends Controller
 {
@@ -11,7 +12,7 @@ class BasicController extends Controller
      */
     public function index()
     {
-        //
+        return view('basic.index', ['datas'=>Basic::searchAll()]);
     }
 
     /**

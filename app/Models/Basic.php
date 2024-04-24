@@ -9,21 +9,23 @@ class Basic extends Model
 {
     use HasFactory;
 
-    public static function searchAll() {
-        $datas = [['id'=>1, 'NO'=>0, 'name'=>'test', 'amount'=>1], ['id'=>2, 'NO'=>1, 'name'=>'test02', 'amount'=>10]];
-        return $datas;
-    }
+    protected $table = 'basics';
 
-    public static function search($id) {
-        $datas = self::searchAll();
-        $target = [];
-        foreach($datas as $data){
-            if($data['id'] == $id){
-                $target = $data;
-                break;
-            }
-        }
-        return $target;
-    }
+    // public static function searchAll() {
+    //     $datas = [['id'=>1, 'NO'=>0, 'name'=>'test', 'amount'=>1], ['id'=>2, 'NO'=>1, 'name'=>'test02', 'amount'=>10]];
+    //     return $datas;
+    // }
+
+    // public static function search($id) {
+    //     $datas = self::searchAll();
+    //     $target = [];
+    //     foreach($datas as $data){
+    //         if($data['id'] == $id){
+    //             $target = $data;
+    //             break;
+    //         }
+    //     }
+    //     return $target;
+    // }
 }
 

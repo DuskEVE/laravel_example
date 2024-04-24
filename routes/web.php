@@ -10,7 +10,4 @@ Route::get('/', function () {
 
 Route::get('/basic', [BasicController::class, 'index']);
 
-Route::get('/basic/{id}', function ($id) {
-    // dd(Basic::search($id));
-    return view('basic.index', ['data'=>Basic::search($id), 'id'=>$id]);
-});
+Route::get('/basic/{id}', [BasicController::class, 'show']);

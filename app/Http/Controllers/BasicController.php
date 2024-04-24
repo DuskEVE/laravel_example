@@ -12,7 +12,8 @@ class BasicController extends Controller
      */
     public function index()
     {
-        return view('basic.index', ['datas'=>Basic::searchAll()]);
+        // dd(Basic::all());
+        return view('basic.index', ['datas'=>Basic::all()]);
     }
 
     /**
@@ -36,7 +37,7 @@ class BasicController extends Controller
      */
     public function show(string $id)
     {
-        //
+        return view('basic.index', ['data'=>Basic::find($id), 'id'=>$id]);
     }
 
     /**

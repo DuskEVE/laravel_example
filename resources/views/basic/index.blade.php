@@ -11,7 +11,7 @@
     <div class="container">
         <h2 class="text-center">Basic form</h2>
         <div class="text-center">
-            <button class="btn btn-success">add</button>
+            <a class="btn btn-success" href="./basic/create">add</a>
         </div>
         <table class="table align-middle text-center">
             <thead>

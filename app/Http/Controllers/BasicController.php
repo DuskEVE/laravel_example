@@ -21,7 +21,7 @@ class BasicController extends Controller
      */
     public function create()
     {
-        //
+        return view('basic.create');
     }
 
     /**
@@ -29,7 +29,7 @@ class BasicController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request->all());
     }
 
     /**

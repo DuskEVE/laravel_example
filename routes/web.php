@@ -10,4 +10,8 @@ Route::get('/', function () {
 
 Route::get('/basic', [BasicController::class, 'index']);
 
+Route::get('/basic/create', [BasicController::class, 'create']);
+
+Route::post('/basic/store', [BasicController::class, 'store']);
+
 Route::get('/basic/{id}', [BasicController::class, 'show']);

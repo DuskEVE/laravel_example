@@ -29,7 +29,13 @@ class BasicController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->all());
+        // dd($request->all());
+        $formDatas = $request->validate([
+            'name'=>['required', 'unique:basics'],
+            'amount'=>'required'
+        ]);
+
+        return redirect('/');
     }
 
     /**

@@ -13,9 +13,15 @@
             @csrf
             <label class="form-label fs-3" for="name">Name</label>
             <input type="text" name="name" id="name" class="form-control">
+            @error('name')
+                <p class="text-danger fs-4">{{$message}}</p>
+            @enderror
 
             <label class="form-label fs-3" for="amount">Amount</label>
-            <input type="text" name="amount" id="amount" class="form-control">
+            <input type="number" name="amount" id="amount" class="form-control">
+            @error('amount')
+                <p class="text-danger fs-4">{{$message}}</p>
+            @enderror
 
             <div class="text-center m-3">
                 <input type="submit" class="btn btn-success" value="Create">

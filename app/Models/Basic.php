@@ -11,6 +11,8 @@ class Basic extends Model
 
     protected $table = 'basics';
 
+    protected $fillable = ['name', 'amount', 'NO'];
+
     // public static function searchAll() {
     //     $datas = [['id'=>1, 'NO'=>0, 'name'=>'test', 'amount'=>1], ['id'=>2, 'NO'=>1, 'name'=>'test02', 'amount'=>10]];
     //     return $datas;

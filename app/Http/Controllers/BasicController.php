@@ -34,8 +34,11 @@ class BasicController extends Controller
             'name'=>['required', 'unique:basics'],
             'amount'=>'required'
         ]);
+        $formDatas['NO'] = 101;
+        $datas = new Basic($formDatas);
+        $datas->save();
 
-        return redirect('/');
+        return redirect('/basic');
     }
 
     /**

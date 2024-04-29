@@ -16,4 +16,6 @@ Route::post('/basic/store', [BasicController::class, 'store']);
 
 Route::get('/basic/edit/{id}', [BasicController::class, 'edit']);
 
+Route::put('/basic/edit/update/{id}', [BasicController::class, 'update']);
+
 Route::get('/basic/{id}', [BasicController::class, 'show']);

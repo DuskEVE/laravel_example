@@ -62,7 +62,14 @@ class BasicController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        // dd($request->all());
+        $target = Basic::find($id);
+        $formDatas = $request->all();
+        $target['name'] = $formDatas['name'];
+        $target['amount'] = $formDatas['amount'];
+        $target->save();
+
+        return redirect('/basic');
     }
 
     /**

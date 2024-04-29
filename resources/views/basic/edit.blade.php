@@ -9,8 +9,10 @@
 </head>
 <body>
     <div class="container vh-100 d-flex justify-content-center align-items-center">
-        <form class="form w-50 p-3 bg-secondary text-light rounded" action="./store" method="POST">
+        <form class="form w-50 p-3 bg-secondary text-light rounded" action="./update/{{$id}}" method="POST">
             @csrf
+            @method('PUT')
+
             <label class="form-label fs-3" for="name">Name</label>
             <input type="text" name="name" id="name" class="form-control" value="{{$data['name']}}">
             @error('name')

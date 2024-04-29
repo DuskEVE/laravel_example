@@ -41,7 +41,7 @@
                         <td>{{$data['name']}}</td>
                         <td>{{$data['amount']}}</td>
                         <td>
-                            <button class="btn btn-success">edit</button>
+                            <button class="btn btn-success" onclick="location.href='./basic/edit/{{$data['id']}}'">edit</button>
                             <button class="btn btn-danger">delete</button>
                         </td>
                     </tr>

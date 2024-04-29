@@ -54,7 +54,7 @@ class BasicController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return view('basic.edit', ['data'=>Basic::find($id), 'id'=>$id]);
     }
 
     /**

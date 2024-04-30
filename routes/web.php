@@ -18,4 +18,6 @@ Route::get('/basic/edit/{id}', [BasicController::class, 'edit']);
 
 Route::put('/basic/edit/update/{id}', [BasicController::class, 'update']);
 
+Route::delete('/basic/delete/{id}', [BasicController::class, 'destroy']);
+
 Route::get('/basic/{id}', [BasicController::class, 'show']);

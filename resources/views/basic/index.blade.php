@@ -30,7 +30,11 @@
                         <td>{{$data['amount']}}</td>
                         <td>
                             <button class="btn btn-success">edit</button>
-                            <button class="btn btn-danger">delete</button>
+                            <form action="./delete/{{$data['id']}}" method="POST">
+                                @csrf
+                                @method('delete')
+                                <button class="btn btn-danger">delete</button>
+                            </form>
                         </td>
                     </tr>
                 @else
@@ -41,8 +45,8 @@
                         <td>{{$data['name']}}</td>
                         <td>{{$data['amount']}}</td>
                         <td>
+                            <button class="btn btn-primary" onclick="location.href='./basic/{{$data['id']}}'">show</button>
                             <button class="btn btn-success" onclick="location.href='./basic/edit/{{$data['id']}}'">edit</button>
-                            <button class="btn btn-danger">delete</button>
                         </td>
                     </tr>
 

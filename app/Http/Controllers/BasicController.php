@@ -77,6 +77,10 @@ class BasicController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        // dd($id);
+        $target = Basic::find($id);
+        $target->delete();
+
+        return redirect('/basic');
     }
 }

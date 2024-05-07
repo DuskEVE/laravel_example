@@ -11,6 +11,33 @@
     <div class="container">
         <h2 class="text-center">User register</h2>
 
+        <div class="container vh-100 d-flex justify-content-center align-items-center">
+            <form action="" method="POST" class="form w-50 p-3 bg-secondary text-light rounded">
+                @csrf
+                <label class="form-label fs-3" for="name">Name</label>
+                <input type="text" name="name" id="name" class="form-control">
+                @error('name')
+                    <p class="text-danger fs-4">{{$message}}</p>
+                @enderror
+    
+                <label class="form-label fs-3" for="amount">Password</label>
+                <input type="password" name="password" id="password" class="form-control">
+                @error('password')
+                    <p class="text-danger fs-4">{{$message}}</p>
+                @enderror
+    
+                <label class="form-label fs-3" for="amount">Email</label>
+                <input type="text" name="email" id="email" class="form-control">
+                @error('email')
+                    <p class="text-danger fs-4">{{$message}}</p>
+                @enderror
+    
+                <div class="text-center m-3">
+                    <input type="submit" class="btn btn-success" value="Create">
+                    <input type="reset" class="btn btn-warning" value="Reset">
+                </div>
+            </form>
+        </div>
     </div>    
 </body>
 </html>
